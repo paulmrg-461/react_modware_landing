@@ -88,11 +88,19 @@ const Team: React.FC = () => {
         </div>
 
         {/* Team Stats */}
-        <div className="mt-16 bg-gradient-to-r from-primary-600 to-primary-800 rounded-2xl p-8 md:p-12 text-white">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Why Choose Our Team?
-            </h3>
+        <div className="mt-16 gradient-bg rounded-2xl p-8 md:p-12 text-white relative overflow-hidden">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }} />
+          </div>
+          
+          <div className="relative z-10">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                Why Choose Our Team?
+              </h3>
             <p className="text-primary-100 text-lg max-w-2xl mx-auto">
               Our diverse team brings together expertise from different domains to deliver 
               comprehensive solutions for your business needs.
@@ -116,6 +124,7 @@ const Team: React.FC = () => {
               <div className="text-3xl md:text-4xl font-bold text-primary-400 mb-2">100%</div>
               <div className="text-primary-100">Client Satisfaction</div>
             </div>
+          </div>
           </div>
         </div>
 
