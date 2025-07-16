@@ -1,0 +1,20 @@
+<svg width="192" height="192" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#05C0F4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#037394;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="192" height="192" fill="url(#bgGradient)" rx="24"/>
+  <g fill="white">
+    <!-- Modware Logo -->
+    <polygon points="48,58 70,36 92,58 70,80"/>
+    <polygon points="92,58 114,36 136,58 114,80"/>
+    <polygon points="36,102 58,80 80,102 58,124"/>
+    <polygon points="80,102 102,80 124,102 102,124"/>
+    <polygon points="124,102 146,80 168,102 146,124"/>
+    <polygon points="58,146 80,124 102,146 80,168"/>
+    <polygon points="102,146 124,124 146,146 124,168"/>
+  </g>
+  <text x="96" y="185" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">MODWARE</text>
+</svg>

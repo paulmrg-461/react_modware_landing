@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
+import SEO from './components/SEO';
 import Team from './components/Team';
 import Clients from './components/Clients';
 import Contact from './components/Contact';
@@ -14,6 +15,7 @@ function App() {
       <main>
         <Hero />
         <Services />
+        <SEO />
         <Team />
         <Clients />
         <Contact />

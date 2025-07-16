@@ -1,0 +1,14 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" fill="#05C0F4" rx="4"/>
+  <g fill="white">
+    <!-- Modware Logo Simplified -->
+    <polygon points="8,10 12,6 16,10 12,14"/>
+    <polygon points="16,10 20,6 24,10 20,14"/>
+    <polygon points="6,18 10,14 14,18 10,22"/>
+    <polygon points="14,18 18,14 22,18 18,22"/>
+    <polygon points="22,18 26,14 30,18 26,22"/>
+    <polygon points="10,26 14,22 18,26 14,30"/>
+    <polygon points="18,26 22,22 26,26 22,30"/>
+  </g>
+  <text x="16" y="28" font-family="Arial, sans-serif" font-size="6" font-weight="bold" text-anchor="middle" fill="white">MW</text>
+</svg>

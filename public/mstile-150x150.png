@@ -1,0 +1,14 @@
+<svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+  <rect width="150" height="150" fill="#05C0F4"/>
+  <g fill="white">
+    <!-- Modware Logo for Windows Tile -->
+    <polygon points="37,46 54,29 71,46 54,63"/>
+    <polygon points="71,46 88,29 105,46 88,63"/>
+    <polygon points="29,79 46,62 63,79 46,96"/>
+    <polygon points="63,79 80,62 97,79 80,96"/>
+    <polygon points="97,79 114,62 131,79 114,96"/>
+    <polygon points="46,112 63,95 80,112 63,129"/>
+    <polygon points="80,112 97,95 114,112 97,129"/>
+  </g>
+  <text x="75" y="145" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">MODWARE</text>
+</svg>

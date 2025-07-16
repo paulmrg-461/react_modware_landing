@@ -1,0 +1,13 @@
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <rect width="16" height="16" fill="#05C0F4" rx="2"/>
+  <g fill="white">
+    <!-- Simplified Modware Logo -->
+    <polygon points="4,5 6,3 8,5 6,7"/>
+    <polygon points="8,5 10,3 12,5 10,7"/>
+    <polygon points="3,9 5,7 7,9 5,11"/>
+    <polygon points="7,9 9,7 11,9 9,11"/>
+    <polygon points="11,9 13,7 15,9 13,11"/>
+    <polygon points="5,13 7,11 9,13 7,15"/>
+    <polygon points="9,13 11,11 13,13 11,15"/>
+  </g>
+</svg>
