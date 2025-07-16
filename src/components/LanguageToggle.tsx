@@ -31,4 +31,4 @@ const LanguageToggle: React.FC<LanguageToggleProps> = ({ isScrolled = false }) =
   );
 };
 
-export default LanguageToggle;
+export default LanguageToggle;  
