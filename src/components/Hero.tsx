@@ -26,7 +26,7 @@ const Hero = () => {
         </svg>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-16 sm:mt-20">
         {/* Location Badge */}
         <div className="hidden sm:inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mt-4 mb-4 border border-white/20">
           <MapPin className="w-4 h-4 text-primary-300" />
@@ -34,7 +34,7 @@ const Hero = () => {
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+        <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
           {t('hero.title')}{' '}
           <span className="bg-gradient-to-r from-primary-300 to-accent-300 bg-clip-text text-transparent">
             {t('hero.titleHighlight')}
