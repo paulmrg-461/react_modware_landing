@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ArrowRight, MapPin, Users, Award, Clock } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 

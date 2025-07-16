@@ -15,7 +15,7 @@ interface LanguageProviderProps {
 }
 
 // Translations object
-const translations = {
+const translations: Record<Language, Record<string, string>> = {
   es: {
     // Header
     'header.home': 'Inicio',
