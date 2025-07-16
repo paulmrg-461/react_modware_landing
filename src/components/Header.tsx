@@ -65,10 +65,10 @@ const Header: React.FC = () => {
                 {item.label}
               </button>
             ))}
-            <LanguageToggle />
+            <LanguageToggle isScrolled={isScrolled} />
             <button 
               onClick={() => scrollToSection('contact')}
-              className="btn-primary"
+              className=" btn-primary"
             >
               {t('header.getStarted')}
             </button>
@@ -100,7 +100,7 @@ const Header: React.FC = () => {
               ))}
               <div className="px-4 pt-2 space-y-2">
                 <div className="flex justify-center">
-                  <LanguageToggle />
+                  <LanguageToggle isScrolled={true} />
                 </div>
                 <button 
                   onClick={() => scrollToSection('contact')}
