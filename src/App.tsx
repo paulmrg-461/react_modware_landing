@@ -7,21 +7,24 @@ import Team from './components/Team';
 import Clients from './components/Clients';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { LanguageProvider } from './contexts/LanguageContext';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <main>
-        <Hero />
-        <Services />
-        <SEO />
-        <Team />
-        <Clients />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <LanguageProvider>
+      <div className="min-h-screen bg-white">
+        <Header />
+        <main>
+          <Hero />
+          <Services />
+          <SEO />
+          <Team />
+          <Clients />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </LanguageProvider>
   );
 }
 

@@ -9,6 +9,7 @@ import {
   MessageCircle,
   CheckCircle
 } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface FormData {
   name: string;
@@ -20,6 +21,7 @@ interface FormData {
 }
 
 const Contact: React.FC = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -56,15 +58,15 @@ const Contact: React.FC = () => {
   };
 
   const services = [
-    'Custom Software Development',
-    'Web Applications',
-    'Mobile Applications',
-    'Automation Systems',
-    'Artificial Intelligence',
-    'Chatbots',
-    'CRM Systems',
-    'Billing & Invoicing',
-    'Other'
+    t('contact.services.custom'),
+    t('contact.services.web'),
+    t('contact.services.mobile'),
+    t('contact.services.automation'),
+    t('contact.services.ai'),
+    t('contact.services.chatbots'),
+    t('contact.services.crm'),
+    t('contact.services.billing'),
+    t('contact.services.other')
   ];
 
   return (
@@ -73,11 +75,10 @@ const Contact: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Let's Start Your <span className="text-primary-600">Digital Journey</span>
+            {t('contact.title')} <span className="text-primary-600">{t('contact.titleHighlight')}</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto text-balance">
-            Ready to transform your business with cutting-edge technology? 
-            Get in touch with us today for a free consultation.
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -86,12 +87,10 @@ const Contact: React.FC = () => {
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Get in Touch
+                {t('contact.getInTouch.title')}
               </h3>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                We're here to help you bring your ideas to life. Whether you need a 
-                custom application, want to automate your processes, or explore AI solutions, 
-                our team is ready to assist you.
+                {t('contact.getInTouch.description')}
               </p>
             </div>
 
@@ -102,8 +101,8 @@ const Contact: React.FC = () => {
                   <MapPin className="w-6 h-6 text-primary-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Location</h4>
-                  <p className="text-gray-600">Popayán, Cauca, Colombia</p>
+                  <h4 className="font-semibold text-gray-900 mb-1">{t('contact.info.location')}</h4>
+                  <p className="text-gray-600">{t('contact.info.locationValue')}</p>
                 </div>
               </div>
 
@@ -112,7 +111,7 @@ const Contact: React.FC = () => {
                   <Globe className="w-6 h-6 text-primary-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Website</h4>
+                  <h4 className="font-semibold text-gray-900 mb-1">{t('contact.info.website')}</h4>
                   <a 
                     href="https://modware.lat" 
                     target="_blank" 
@@ -129,7 +128,7 @@ const Contact: React.FC = () => {
                   <Mail className="w-6 h-6 text-primary-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
+                  <h4 className="font-semibold text-gray-900 mb-1">{t('contact.info.email')}</h4>
                   <a 
                     href="mailto:info@modware.lat" 
                     className="text-primary-600 hover:text-primary-700 transition-colors"
@@ -144,34 +143,34 @@ const Contact: React.FC = () => {
                   <Clock className="w-6 h-6 text-primary-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Business Hours</h4>
-                  <p className="text-gray-600">Monday - Friday: 8:00 AM - 6:00 PM (COT)</p>
-                  <p className="text-gray-600">Saturday: 9:00 AM - 2:00 PM (COT)</p>
+                  <h4 className="font-semibold text-gray-900 mb-1">{t('contact.info.hours')}</h4>
+                  <p className="text-gray-600">{t('contact.info.hoursWeekdays')}</p>
+                  <p className="text-gray-600">{t('contact.info.hoursSaturday')}</p>
                 </div>
               </div>
             </div>
 
             {/* Quick Contact Options */}
             <div className="bg-gray-50 rounded-xl p-6">
-              <h4 className="font-semibold text-gray-900 mb-4">Quick Contact</h4>
+              <h4 className="font-semibold text-gray-900 mb-4">{t('contact.quickContact.title')}</h4>
               <div className="space-y-3">
                 <a 
                   href="mailto:info@modware.lat"
                   className="flex items-center space-x-3 text-gray-700 hover:text-primary-600 transition-colors"
                 >
                   <Mail className="w-5 h-5" />
-                  <span>Send us an email</span>
+                  <span>{t('contact.quickContact.email')}</span>
                 </a>
                 <a 
                   href="tel:+573043162313"
                   className="flex items-center space-x-3 text-gray-700 hover:text-primary-600 transition-colors"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>Call us directly</span>
+                  <span>{t('contact.quickContact.call')}</span>
                 </a>
                 <button className="flex items-center space-x-3 text-gray-700 hover:text-primary-600 transition-colors">
                   <MessageCircle className="w-5 h-5" />
-                  <span>Start a chat</span>
+                  <span>{t('contact.quickContact.chat')}</span>
                 </button>
               </div>
             </div>
@@ -183,14 +182,14 @@ const Contact: React.FC = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                    Send us a Message
+                    {t('contact.form.title')}
                   </h3>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name *
+                      {t('contact.form.name')}
                     </label>
                     <input
                       type="text"
@@ -200,13 +199,13 @@ const Contact: React.FC = () => {
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
-                      placeholder="Your full name"
+                      placeholder={t('contact.form.namePlaceholder')}
                     />
                   </div>
 
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address *
+                      {t('contact.form.email')}
                     </label>
                     <input
                       type="email"
@@ -216,7 +215,7 @@ const Contact: React.FC = () => {
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
-                      placeholder="your@email.com"
+                      placeholder={t('contact.form.emailPlaceholder')}
                     />
                   </div>
                 </div>
@@ -224,7 +223,7 @@ const Contact: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                      Company
+                      {t('contact.form.company')}
                     </label>
                     <input
                       type="text"
@@ -233,13 +232,13 @@ const Contact: React.FC = () => {
                       value={formData.company}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
-                      placeholder="Your company name"
+                      placeholder={t('contact.form.companyPlaceholder')}
                     />
                   </div>
 
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number
+                      {t('contact.form.phone')}
                     </label>
                     <input
                       type="tel"
@@ -248,14 +247,14 @@ const Contact: React.FC = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
-                      placeholder="+57 300 123 4567"
+                      placeholder={t('contact.form.phonePlaceholder')}
                     />
                   </div>
                 </div>
 
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                    Service of Interest
+                    {t('contact.form.service')}
                   </label>
                   <select
                     id="service"
@@ -264,7 +263,7 @@ const Contact: React.FC = () => {
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
                   >
-                    <option value="">Select a service</option>
+                    <option value="">{t('contact.form.selectService')}</option>
                     {services.map((service) => (
                       <option key={service} value={service}>
                         {service}
@@ -275,7 +274,7 @@ const Contact: React.FC = () => {
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
+                    {t('contact.form.message')}
                   </label>
                   <textarea
                     id="message"
@@ -285,7 +284,7 @@ const Contact: React.FC = () => {
                     required
                     rows={5}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors resize-none"
-                    placeholder="Tell us about your project, requirements, or any questions you have..."
+                    placeholder={t('contact.form.messagePlaceholder')}
                   />
                 </div>
 
@@ -293,7 +292,7 @@ const Contact: React.FC = () => {
                   type="submit"
                   className="w-full btn-primary group inline-flex items-center justify-center space-x-2"
                 >
-                  <span>Send Message</span>
+                  <span>{t('contact.form.submit')}</span>
                   <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </form>
@@ -303,10 +302,10 @@ const Contact: React.FC = () => {
                   <CheckCircle className="w-8 h-8 text-green-600" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  Message Sent Successfully!
+                  {t('contact.form.successTitle')}
                 </h3>
                 <p className="text-gray-600">
-                  Thank you for reaching out. We'll get back to you within 24 hours.
+                  {t('contact.form.successMessage')}
                 </p>
               </div>
             )}

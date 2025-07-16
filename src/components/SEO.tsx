@@ -1,113 +1,112 @@
 import React from 'react';
+import { Smartphone, Globe, Brain, Building2, CheckCircle, MapPin, Users, Award } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const SEO: React.FC = () => {
+  const { t } = useLanguage();
   return (
     <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50" id="seo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* SEO Content Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Desarrollo de Software en Colombia
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Somos una empresa colombiana especializada en desarrollo de aplicaciones móviles, 
-            web y soluciones de inteligencia artificial para empresas de todos los tamaños.
-          </p>
-        </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              {t('seo.title')}
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              {t('seo.subtitle')}
+            </p>
+          </div>
 
         {/* SEO Rich Content */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">
-              Desarrollo de Aplicaciones Móviles
-            </h3>
-            <p className="text-gray-600">
-              Creamos aplicaciones móviles nativas e híbridas para iOS y Android 
-              utilizando las últimas tecnologías como Flutter, React Native y desarrollo nativo.
+          <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                <Smartphone className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900">{t('seo.mobile.title')}</h3>
+            </div>
+            <p className="text-gray-600 leading-relaxed">
+              {t('seo.mobile.description')}
             </p>
-            <ul className="mt-4 text-sm text-gray-500">
-              <li>• Flutter Development</li>
-              <li>• React Native</li>
-              <li>• iOS & Android Nativo</li>
-              <li>• Progressive Web Apps (PWA)</li>
-            </ul>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">
-              Desarrollo Web Profesional
-            </h3>
-            <p className="text-gray-600">
-              Desarrollamos sitios web y aplicaciones web modernas, responsivas y optimizadas 
-              para SEO utilizando tecnologías como React, Angular, Vue.js y Node.js.
+          <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                <Globe className="w-6 h-6 text-green-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900">{t('seo.web.title')}</h3>
+            </div>
+            <p className="text-gray-600 leading-relaxed">
+              {t('seo.web.description')}
             </p>
-            <ul className="mt-4 text-sm text-gray-500">
-              <li>• React & Next.js</li>
-              <li>• Angular & Vue.js</li>
-              <li>• Node.js & Express</li>
-              <li>• E-commerce Solutions</li>
-            </ul>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">
-              Inteligencia Artificial y Machine Learning
-            </h3>
-            <p className="text-gray-600">
-              Implementamos soluciones de IA personalizadas, chatbots inteligentes, 
-              análisis de datos y automatización de procesos empresariales.
+          <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                <Brain className="w-6 h-6 text-purple-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900">{t('seo.ai.title')}</h3>
+            </div>
+            <p className="text-gray-600 leading-relaxed">
+              {t('seo.ai.description')}
             </p>
-            <ul className="mt-4 text-sm text-gray-500">
-              <li>• Chatbots con IA</li>
-              <li>• Análisis Predictivo</li>
-              <li>• Procesamiento de Lenguaje Natural</li>
-              <li>• Automatización de Procesos</li>
-            </ul>
           </div>
         </div>
 
-        {/* Location and Contact SEO */}
-        <div className="bg-white p-8 rounded-lg shadow-md">
+        {/* Company Information SEO */}
+        <div className="bg-white rounded-xl p-8 shadow-lg">
+          <div className="flex items-center mb-6">
+            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+              <Building2 className="w-6 h-6 text-blue-600" />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900">{t('seo.company.title')}</h3>
+          </div>
+          
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                Empresa de Software en Colombia
-              </h3>
+              <h4 className="text-lg font-semibold text-gray-900 mb-4">{t('seo.company.about.title')}</h4>
               <p className="text-gray-600 mb-4">
-                Modware es una empresa colombiana de desarrollo de software con sede en Colombia, 
-                especializada en crear soluciones tecnológicas innovadoras para empresas locales e internacionales.
+                {t('seo.company.about.description')}
               </p>
-              <div className="space-y-2 text-sm text-gray-500">
-                <p><strong>Ubicación:</strong> Colombia</p>
-                <p><strong>Especialidad:</strong> Desarrollo de Software Personalizado</p>
-                <p><strong>Industrias:</strong> Fintech, E-commerce, Salud, Educación, Logística</p>
-                <p><strong>Tecnologías:</strong> Flutter, React, Node.js, Python, AWS, Firebase</p>
+              <div className="flex items-center text-gray-600 mb-2">
+                <MapPin className="w-4 h-4 mr-2" />
+                <span>{t('seo.company.about.location')}</span>
+              </div>
+              <div className="flex items-center text-gray-600 mb-2">
+                <Users className="w-4 h-4 mr-2" />
+                <span>{t('seo.company.about.team')}</span>
+              </div>
+              <div className="flex items-center text-gray-600">
+                <Award className="w-4 h-4 mr-2" />
+                <span>{t('seo.company.about.projects')}</span>
               </div>
             </div>
+            
             <div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                ¿Por qué elegir Modware?
-              </h3>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-start">
-                  <span className="text-primary-500 mr-2">✓</span>
-                  Más de 6 años de experiencia en desarrollo de software
+              <h4 className="text-lg font-semibold text-gray-900 mb-4">{t('seo.company.services.title')}</h4>
+              <ul className="space-y-2">
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  <span>{t('seo.company.services.mobile')}</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-primary-500 mr-2">✓</span>
-                  Equipo de desarrolladores certificados y especializados
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  <span>{t('seo.company.services.web')}</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-primary-500 mr-2">✓</span>
-                  Metodologías ágiles y entrega garantizada
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  <span>{t('seo.company.services.ai')}</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-primary-500 mr-2">✓</span>
-                  Soporte técnico 24/7 y mantenimiento continuo
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  <span>{t('seo.company.services.consulting')}</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-primary-500 mr-2">✓</span>
-                  Precios competitivos y transparentes
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  <span>{t('seo.company.services.support')}</span>
                 </li>
               </ul>
             </div>

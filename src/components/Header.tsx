@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import LanguageToggle from './LanguageToggle';
 import logoHorizontal from '../assets/images/logo_horizontal.png';
 import logoHorizontalGray from '../assets/images/logo_horizontal_gray.png';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,11 +28,11 @@ const Header: React.FC = () => {
   };
 
   const navItems = [
-    { label: 'Home', id: 'hero' },
-    { label: 'Services', id: 'services' },
-    { label: 'Team', id: 'team' },
-    { label: 'Clients', id: 'clients' },
-    { label: 'Contact', id: 'contact' }
+    { label: t('header.home'), id: 'hero' },
+    { label: t('header.services'), id: 'services' },
+    { label: t('header.team'), id: 'team' },
+    { label: t('header.clients'), id: 'clients' },
+    { label: t('header.contact'), id: 'contact' }
   ];
 
   return (
@@ -62,11 +65,12 @@ const Header: React.FC = () => {
                 {item.label}
               </button>
             ))}
+            <LanguageToggle />
             <button 
               onClick={() => scrollToSection('contact')}
               className="btn-primary"
             >
-              Get Started
+              {t('header.getStarted')}
             </button>
           </div>
 
@@ -94,12 +98,15 @@ const Header: React.FC = () => {
                   {item.label}
                 </button>
               ))}
-              <div className="px-4 pt-2">
+              <div className="px-4 pt-2 space-y-2">
+                <div className="flex justify-center">
+                  <LanguageToggle />
+                </div>
                 <button 
                   onClick={() => scrollToSection('contact')}
                   className="btn-primary w-full"
                 >
-                  Get Started
+                  {t('header.getStarted')}
                 </button>
               </div>
             </div>
