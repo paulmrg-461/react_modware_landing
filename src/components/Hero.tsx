@@ -1,7 +1,10 @@
 import React from 'react';
-import { ArrowRight, MapPin, Globe } from 'lucide-react';
+import { ArrowRight, MapPin, Users, Award, Clock } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
-const Hero: React.FC = () => {
+const Hero = () => {
+  const { t } = useLanguage();
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -10,75 +13,85 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center gradient-bg overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden gradient-bg">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
+        <svg className="w-full h-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="dots" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+              <circle cx="5" cy="5" r="1" fill="currentColor" />
+            </pattern>
+          </defs>
+          <rect width="100" height="100" fill="url(#dots)" />
+        </svg>
       </div>
 
-      <div className="container-custom relative z-10">
-        <div className="max-w-4xl mx-auto text-center text-white">
-          {/* Location Badge */}
-          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-4 mt-2">
-            <MapPin className="w-4 h-4" />
-            <span className="text-sm font-medium">Popayán, Cauca, Colombia</span>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Location Badge */}
+        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8 border border-white/20">
+          <MapPin className="w-4 h-4 text-primary-300" />
+          <span className="text-white/90 text-sm font-medium">{t('hero.location')}</span>
+        </div>
+
+        {/* Main Heading */}
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          {t('hero.title')}{' '}
+          <span className="bg-gradient-to-r from-primary-300 to-accent-300 bg-clip-text text-transparent">
+            {t('hero.titleHighlight')}
+          </span>
+        </h1>
+
+        {/* Subtitle */}
+        <p className="text-xl md:text-2xl text-white/80 mb-12 max-w-4xl mx-auto leading-relaxed">
+          {t('hero.subtitle')}
+        </p>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <button 
+            onClick={() => scrollToSection('services')}
+            className="group bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl flex items-center justify-center gap-2"
+          >
+            {t('hero.exploreServices')}
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+          </button>
+          <button 
+            onClick={() => scrollToSection('contact')}
+            className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+          >
+            {t('hero.startProject')}
+          </button>
+        </div>
+
+        {/* Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+          <div className="text-center">
+            <div className="flex items-center justify-center w-12 h-12 bg-primary-500/20 rounded-lg mb-3 mx-auto">
+              <Users className="w-6 h-6 text-primary-300" />
+            </div>
+            <div className="text-3xl font-bold text-white mb-1">15+</div>
+            <div className="text-white/70 text-sm">{t('hero.developers')}</div>
           </div>
-
-          {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-balance">
-            Transforming Ideas into
-            <span className="block text-primary-400">Digital Solutions</span>
-          </h1>
-
-          {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto text-balance">
-            We are Modware, a Colombian software development company specializing in 
-            custom applications, AI solutions, and digital transformation.
-          </p>
-
-          {/* Website Badge */}
-          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-12">
-            <Globe className="w-4 h-4" />
-            <span className="text-sm font-medium">modware.lat</span>
+          <div className="text-center">
+            <div className="flex items-center justify-center w-12 h-12 bg-primary-500/20 rounded-lg mb-3 mx-auto">
+              <Award className="w-6 h-6 text-primary-300" />
+            </div>
+            <div className="text-3xl font-bold text-white mb-1">100+</div>
+            <div className="text-white/70 text-sm">{t('hero.projects')}</div>
           </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button 
-              onClick={() => scrollToSection('services')}
-              className="btn-primary group inline-flex items-center space-x-2 text-lg px-8 py-4"
-            >
-              <span>Explore Our Services</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="btn-secondary text-lg px-8 py-4"
-            >
-              Start Your Project
-            </button>
+          <div className="text-center">
+            <div className="flex items-center justify-center w-12 h-12 bg-primary-500/20 rounded-lg mb-3 mx-auto">
+              <Users className="w-6 h-6 text-primary-300" />
+            </div>
+            <div className="text-3xl font-bold text-white mb-1">50+</div>
+            <div className="text-white/70 text-sm">{t('hero.clients')}</div>
           </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-white/20">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary-400 mb-2">5+</div>
-              <div className="text-blue-200 text-sm md:text-base">Expert Developers</div>
+          <div className="text-center">
+            <div className="flex items-center justify-center w-12 h-12 bg-primary-500/20 rounded-lg mb-3 mx-auto">
+              <Clock className="w-6 h-6 text-primary-300" />
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary-400 mb-2">50+</div>
-              <div className="text-blue-200 text-sm md:text-base">Projects Delivered</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary-400 mb-2">6+</div>
-              <div className="text-blue-200 text-sm md:text-base">Happy Clients</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary-400 mb-2">6+</div>
-              <div className="text-blue-200 text-sm md:text-base">Years Experience</div>
-            </div>
+            <div className="text-3xl font-bold text-white mb-1">6+</div>
+            <div className="text-white/70 text-sm">{t('hero.experience')}</div>
           </div>
         </div>
       </div>
@@ -86,7 +99,7 @@ const Hero: React.FC = () => {
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse" />
+          <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>

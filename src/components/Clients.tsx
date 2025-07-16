@@ -1,8 +1,10 @@
 import React from 'react';
 import { Star, ArrowRight, Quote } from 'lucide-react';
 import { clients } from '../data';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Clients: React.FC = () => {
+  const { t } = useLanguage();
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -15,24 +17,24 @@ const Clients: React.FC = () => {
       id: 1,
       name: 'Carlos Guerrero',
       company: 'MegaHogar',
-      role: 'CEO',
-      content: 'Modware transformed our retail operations with their innovative e-commerce platform. Sales increased by 150% in the first quarter.',
+      role: t('clients.testimonials.ceo'),
+      content: t('clients.testimonials.testimonial1'),
       rating: 5
     },
     {
       id: 2,
       name: 'Vanessa Rengifo',
       company: 'Jirehfarma',
-      role: 'Operations Manager',
-      content: 'The pharmaceutical management system they developed streamlined our inventory and improved our efficiency dramatically.',
+      role: t('clients.testimonials.operations'),
+      content: t('clients.testimonials.testimonial2'),
       rating: 5
     },
     {
       id: 3,
       name: 'Jinna Hurtado',
       company: 'Central Aluminios',
-      role: 'Production Director',
-      content: 'Their automation solutions reduced our processing time by 40% and eliminated manual errors in our manufacturing process.',
+      role: t('clients.testimonials.production'),
+      content: t('clients.testimonials.testimonial3'),
       rating: 5
     }
   ];
@@ -43,11 +45,10 @@ const Clients: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Trusted by <span className="text-primary-600">Leading Companies</span>
+            {t('clients.title')} <span className="text-primary-600">{t('clients.titleHighlight')}</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto text-balance">
-            We've had the privilege of working with amazing companies across different 
-            industries, helping them achieve their digital transformation goals.
+            {t('clients.subtitle')}
           </p>
         </div>
 
@@ -88,7 +89,7 @@ const Clients: React.FC = () => {
         {/* Testimonials */}
         <div className="mb-16">
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-12">
-            What Our Clients Say
+            {t('clients.testimonials.title')}
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -132,29 +133,29 @@ const Clients: React.FC = () => {
         <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100 mb-16">
           <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Our Impact in Numbers
+              {t('clients.metrics.title')}
             </h3>
             <p className="text-lg text-gray-600">
-              Real results that matter to our clients' success
+              {t('clients.metrics.subtitle')}
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">150%</div>
-              <div className="text-gray-600">Average Sales Increase</div>
+              <div className="text-gray-600">{t('clients.metrics.sales')}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">40%</div>
-              <div className="text-gray-600">Process Efficiency Gain</div>
+              <div className="text-gray-600">{t('clients.metrics.efficiency')}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">99.9%</div>
-              <div className="text-gray-600">System Uptime</div>
+              <div className="text-gray-600">{t('clients.metrics.uptime')}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">24/7</div>
-              <div className="text-gray-600">Support Coverage</div>
+              <div className="text-gray-600">{t('clients.metrics.support')}</div>
             </div>
           </div>
         </div>
@@ -162,17 +163,16 @@ const Clients: React.FC = () => {
         {/* CTA Section */}
         <div className="text-center">
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            Ready to Join Our Success Stories?
+            {t('clients.cta.title')}
           </h3>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can help your business achieve similar results. 
-            Schedule a free consultation today.
+            {t('clients.cta.subtitle')}
           </p>
           <button 
             onClick={scrollToContact}
             className="btn-primary group inline-flex items-center space-x-2 text-lg px-8 py-4"
           >
-            <span>Start Your Success Story</span>
+            <span>{t('clients.cta.button')}</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>

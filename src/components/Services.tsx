@@ -11,9 +11,11 @@ import {
   ArrowRight,
   Check
 } from 'lucide-react';
-import { services } from '../data';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Services: React.FC = () => {
+  const { t } = useLanguage();
+  
   const serviceIcons = {
     1: Code,
     2: Globe,
@@ -32,17 +34,31 @@ const Services: React.FC = () => {
     }
   };
 
+  const getServiceData = (id: number) => {
+    return {
+      id,
+      title: t(`services.data.${id}.title`),
+      description: t(`services.data.${id}.description`),
+      features: [
+        t(`services.data.${id}.feature1`),
+        t(`services.data.${id}.feature2`),
+        t(`services.data.${id}.feature3`)
+      ]
+    };
+  };
+
+  const services = [1, 2, 3, 4, 5, 6, 7, 8].map(id => getServiceData(id));
+
   return (
     <section id="services" className="section-padding bg-gray-50">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Our <span className="text-primary-600">Services</span>
+            {t('services.title')} <span className="text-primary-600">{t('services.titleHighlight')}</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto text-balance">
-            We offer comprehensive software development services to help your business 
-            thrive in the digital age. From custom applications to AI solutions.
+            {t('services.subtitle')}
           </p>
         </div>
 
@@ -89,25 +105,24 @@ const Services: React.FC = () => {
         <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100">
           <div className="text-center max-w-3xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Ready to Transform Your Business?
+              {t('services.cta.title')}
             </h3>
             <p className="text-lg text-gray-600 mb-8">
-              Let's discuss how our expertise can help you achieve your digital goals. 
-              Get a free consultation and project estimate.
+              {t('services.cta.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
                 onClick={scrollToContact}
                 className="btn-primary group inline-flex items-center space-x-2"
               >
-                <span>Get Free Consultation</span>
+                <span>{t('services.cta.consultation')}</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <button 
                 onClick={scrollToContact}
                 className="btn-secondary"
               >
-                Request Quote
+                {t('services.cta.quote')}
               </button>
             </div>
           </div>
@@ -116,7 +131,7 @@ const Services: React.FC = () => {
         {/* Technology Stack */}
         <div className="mt-16 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">
-            Technologies We Master
+            {t('services.technologies')}
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             {[

@@ -1,19 +1,20 @@
 import React from 'react';
 import { Mail, Phone, Linkedin, Github } from 'lucide-react';
 import { collaborators } from '../data';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Team: React.FC = () => {
+  const { t } = useLanguage();
   return (
     <section id="team" className="section-padding bg-white">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Meet Our <span className="text-primary-600">Expert Team</span>
+            {t('team.title')} <span className="text-primary-600">{t('team.titleHighlight')}</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto text-balance">
-            Our talented team of developers, designers, and data scientists are passionate 
-            about creating innovative solutions that drive business success.
+            {t('team.subtitle')}
           </p>
         </div>
 
@@ -99,30 +100,29 @@ const Team: React.FC = () => {
           <div className="relative z-10">
             <div className="text-center mb-8">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                Why Choose Our Team?
+                {t('team.stats.title')}
               </h3>
             <p className="text-primary-100 text-lg max-w-2xl mx-auto">
-              Our diverse team brings together expertise from different domains to deliver 
-              comprehensive solutions for your business needs.
+              {t('team.stats.subtitle')}
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-primary-400 mb-2">15+</div>
-              <div className="text-primary-100">Years Combined Experience</div>
+              <div className="text-primary-100">{t('team.stats.experience')}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-primary-400 mb-2">10+</div>
-              <div className="text-primary-100">Technologies Mastered</div>
+              <div className="text-primary-100">{t('team.stats.technologies')}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-primary-400 mb-2">24/7</div>
-              <div className="text-primary-100">Support Available</div>
+              <div className="text-primary-100">{t('team.stats.support')}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-primary-400 mb-2">100%</div>
-              <div className="text-primary-100">Client Satisfaction</div>
+              <div className="text-primary-100">{t('team.stats.satisfaction')}</div>
             </div>
           </div>
           </div>
@@ -131,23 +131,23 @@ const Team: React.FC = () => {
         {/* Specializations */}
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">
-            Our Specializations
+            {t('team.specializations.title')}
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {[
-              'Frontend Development',
-              'Backend Development', 
-              'Full-Stack Development',
-              'Data Science',
-              'Mobile Development',
-              'DevOps',
-              'UI/UX Design',
-              'AI/ML Solutions',
-              'Cloud Architecture',
-              'Database Design'
-            ].map((specialization) => (
+              t('team.specializations.frontend'),
+              t('team.specializations.backend'),
+              t('team.specializations.fullstack'),
+              t('team.specializations.datascience'),
+              t('team.specializations.mobile'),
+              t('team.specializations.devops'),
+              t('team.specializations.uiux'),
+              t('team.specializations.aiml'),
+              t('team.specializations.cloud'),
+              t('team.specializations.database')
+            ].map((specialization, index) => (
               <div 
-                key={specialization}
+                key={index}
                 className="bg-gray-50 hover:bg-primary-50 border border-gray-200 hover:border-primary-200 rounded-lg p-4 text-center transition-all duration-200"
               >
                 <span className="text-sm font-medium text-gray-700 hover:text-primary-700">
