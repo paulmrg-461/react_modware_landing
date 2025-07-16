@@ -135,8 +135,9 @@ const Services: React.FC = () => {
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             {[
-              'React', 'Node.js', 'Python', 'TypeScript', 'Flutter', 
-              'AWS', 'Firebase', 'PostgreSQL', 'MongoDB', 'Docker'
+              'React', 'Flutter', 'Angular', 'Nest', 'Node.js', 'Python', 'TypeScript', 'Azure',
+              'AWS', 'Firebase', 'PostgreSQL', 'SQL Server', 'MongoDB', 'Docker', 'Kubernetes',
+              '.Net Core', '.Net Framework', 'Inriver PIM', 'Java', 'C#', 'Swift', 'Workato'
             ].map((tech) => (
               <span 
                 key={tech}

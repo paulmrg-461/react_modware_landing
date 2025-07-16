@@ -15,28 +15,28 @@ const Clients: React.FC = () => {
   const testimonials = [
     {
       id: 1,
-      name: 'Carlos Guerrero',
-      company: 'MegaHogar',
+      name: 'Jinna Hurtado',
+      company: 'Grupo Empresarial G&H',
       role: t('clients.testimonials.ceo'),
       content: t('clients.testimonials.testimonial1'),
       rating: 5
     },
     {
       id: 2,
-      name: 'Vanessa Rengifo',
-      company: 'Jirehfarma',
-      role: t('clients.testimonials.operations'),
+      name: 'Jairo Botina',
+      company: 'Grupo Vista',
+      role: t('clients.testimonials.ceo'),
       content: t('clients.testimonials.testimonial2'),
       rating: 5
     },
     {
       id: 3,
-      name: 'Jinna Hurtado',
-      company: 'Central Aluminios',
-      role: t('clients.testimonials.production'),
+      name: 'Carlos Guerrero',
+      company: 'Central de Aluminios del Valle',
+      role: t('clients.testimonials.ceo'),
       content: t('clients.testimonials.testimonial3'),
       rating: 5
-    }
+    },
   ];
 
   return (

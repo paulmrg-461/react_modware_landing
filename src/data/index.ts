@@ -7,6 +7,9 @@ export interface Collaborator {
   email: string;
   profession: string;
   phone: string;
+  github?: string;
+  linkedin?: string;
+  portfolio?: string;
 }
 
 export interface Client {
@@ -31,39 +34,54 @@ export const collaborators: Collaborator[] = [
     imagePath: jimmyImage,
     email: 'jimmyarg87@gmail.com',
     profession: 'Frontend developer',
-    phone: '+573125035306'
+    phone: '+573125035306',
+    github: 'https://github.com/Jimmy287',
+    linkedin: 'https://www.linkedin.com/in/jimmyrealpe',
+    portfolio: 'https://jimmyarg87.github.io/portfolio'
   },
   {
     id: 2,
-    name: 'Rafael Belalcázar',
-    imagePath: rafaelImage,
-    email: 'rafabeldev@gmail.com',
-    profession: 'Data scientist',
-    phone: '+573214153856'
-  },
-  {
-    id: 3,
-    name: 'Víctor Pinto',
-    imagePath: victorImage,
-    email: 'victorp2304.pro@gmail.com',
-    profession: 'Fullstack developer',
-    phone: '+573182345621'
-  },
-  {
-    id: 4,
     name: 'Michael Pardo',
     imagePath: michaelImage,
     email: 'pardo.burbano@gmail.com',
-    profession: 'Backend developer',
-    phone: '+573219115240'
+    profession: 'Fullstack developer',
+    phone: '+573219115240',
+    github: 'https://github.com/MaikPardo',
+    linkedin: 'https://www.linkedin.com/in/michael-pardo-burbano-910031186',
+    portfolio: 'https://michaelpardo.github.io/portfolio'
   },
   {
-    id: 5,
+    id: 3,
     name: 'Paul Realpe',
     imagePath: paulImage,
     email: 'co.devpaul@gmail.com',
     profession: 'Fullstack developer',
-    phone: '+573043162313'
+    phone: '+573043162313',
+    github: 'https://github.com/paulmrg-461',
+    linkedin: 'https://www.linkedin.com/in/paul-realpe-631b17a6',
+    portfolio: 'https://devpaul.pro'
+  },
+  {
+    id: 4,
+    name: 'Rafael Belalcázar',
+    imagePath: rafaelImage,
+    email: 'rafabeldev@gmail.com',
+    profession: 'Data scientist',
+    phone: '+573214153856',
+    github: 'https://github.com/rafabelalcazar',
+    linkedin: 'https://www.linkedin.com/in/rafael-alejandro-belalc%C3%A1zar-burbano-b41595145?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    portfolio: 'https://rafabelalcazar.github.io/portfolio/'
+  },
+  {
+    id: 5,
+    name: 'Víctor Pinto',
+    imagePath: victorImage,
+    email: 'victorp2304.pro@gmail.com',
+    profession: 'Fullstack developer',
+    phone: '+573182345621',
+    github: 'https://github.com/victorp2304',
+    linkedin: 'https://www.linkedin.com/in/victor-pinto-a91254234',
+    portfolio: 'https://victorp2304.github.io/portfolio/'
   }
 ];
 
@@ -73,7 +91,7 @@ export const clients: Client[] = [
     name: 'Megahogar',
     icon: ShoppingCart,
     description: 'E-commerce platform for home and furniture retail',
-    category: 'Retail & E-commerce'
+    category: 'Retail'
   },
   {
     id: '2',
@@ -91,10 +109,10 @@ export const clients: Client[] = [
   },
   {
     id: '4',
-    name: 'Vista',
+    name: 'Grupo Vista',
     icon: Eye,
-    description: 'Visual analytics and monitoring platform',
-    category: 'Analytics'
+    description: 'Professional consulting firm with lawyers, engineers, business administrators, and accountants',
+    category: 'Consulting'
   },
   {
     id: '5',
