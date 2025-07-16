@@ -91,7 +91,7 @@ const SEO: React.FC = () => {
               <ul className="space-y-3 text-gray-600">
                 <li className="flex items-start">
                   <span className="text-primary-500 mr-2">✓</span>
-                  Más de 5 años de experiencia en desarrollo de software
+                  Más de 6 años de experiencia en desarrollo de software
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary-500 mr-2">✓</span>

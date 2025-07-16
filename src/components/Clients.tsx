@@ -13,15 +13,15 @@ const Clients: React.FC = () => {
   const testimonials = [
     {
       id: 1,
-      name: 'Carlos Mendoza',
-      company: 'Megahogar',
+      name: 'Carlos Guerrero',
+      company: 'MegaHogar',
       role: 'CEO',
       content: 'Modware transformed our retail operations with their innovative e-commerce platform. Sales increased by 150% in the first quarter.',
       rating: 5
     },
     {
       id: 2,
-      name: 'Ana Rodriguez',
+      name: 'Vanessa Rengifo',
       company: 'Jirehfarma',
       role: 'Operations Manager',
       content: 'The pharmaceutical management system they developed streamlined our inventory and improved our efficiency dramatically.',
@@ -29,7 +29,7 @@ const Clients: React.FC = () => {
     },
     {
       id: 3,
-      name: 'Miguel Torres',
+      name: 'Jinna Hurtado',
       company: 'Central Aluminios',
       role: 'Production Director',
       content: 'Their automation solutions reduced our processing time by 40% and eliminated manual errors in our manufacturing process.',

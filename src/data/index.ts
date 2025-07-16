@@ -77,7 +77,7 @@ export const clients: Client[] = [
   },
   {
     id: '2',
-    name: 'GH',
+    name: 'G&H',
     icon: Building2,
     description: 'Corporate management and business solutions',
     category: 'Business Management'
