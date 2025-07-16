@@ -101,19 +101,19 @@ const Team: React.FC = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-secondary-400 mb-2">15+</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary-400 mb-2">15+</div>
               <div className="text-primary-100">Years Combined Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-secondary-400 mb-2">10+</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary-400 mb-2">10+</div>
               <div className="text-primary-100">Technologies Mastered</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-secondary-400 mb-2">24/7</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary-400 mb-2">24/7</div>
               <div className="text-primary-100">Support Available</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-secondary-400 mb-2">100%</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary-400 mb-2">100%</div>
               <div className="text-primary-100">Client Satisfaction</div>
             </div>
           </div>

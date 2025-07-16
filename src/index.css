@@ -33,7 +33,15 @@
   }
   
   .gradient-bg {
-    @apply bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800;
+    @apply bg-gradient-to-br from-slate-900 via-slate-800 to-primary-900;
+  }
+  
+  .gradient-bg-alt {
+    @apply bg-gradient-to-r from-primary-50 to-blue-50;
+  }
+  
+  .gradient-bg-card {
+    @apply bg-gradient-to-br from-white to-primary-50/30;
   }
   
   .card-hover {
