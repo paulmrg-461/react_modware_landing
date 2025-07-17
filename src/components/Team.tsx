@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, Linkedin, Github } from 'lucide-react';
+import { Mail, Phone, Linkedin, Github, Globe } from 'lucide-react';
 import { collaborators } from '../data';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -77,12 +77,36 @@ const Team: React.FC = () => {
 
               {/* Social Links */}
               <div className="flex justify-center space-x-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                <button className="w-8 h-8 bg-primary-600 hover:bg-primary-700 text-white rounded-full flex items-center justify-center transition-colors">
-                  <Linkedin className="w-4 h-4" />
-                </button>
-                <button className="w-8 h-8 bg-gray-800 hover:bg-gray-900 text-white rounded-full flex items-center justify-center transition-colors">
-                  <Github className="w-4 h-4" />
-                </button>
+                {member.github && (
+                  <a 
+                    href={member.github} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 bg-gray-800 hover:bg-gray-900 text-white rounded-full flex items-center justify-center transition-colors"
+                  >
+                    <Github className="w-4 h-4" />
+                  </a>
+                )}
+                {member.linkedin && (
+                  <a 
+                    href={member.linkedin} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 bg-primary-600 hover:bg-primary-700 text-white rounded-full flex items-center justify-center transition-colors"
+                  >
+                    <Linkedin className="w-4 h-4" />
+                  </a>
+                )}
+                {member.portfolio && (
+                  <a 
+                    href={member.portfolio} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 bg-gray-800 hover:bg-gray-900 text-white rounded-full flex items-center justify-center transition-colors"
+                  >
+                    <Globe className="w-4 h-4" />
+                  </a>
+                )}
               </div>
             </div>
           ))}

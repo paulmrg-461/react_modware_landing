@@ -9,11 +9,13 @@ import {
   Twitter,
   Instagram,
   ArrowUp,
-  Code,
   Heart
 } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import logoHorizontal from '../assets/images/logo_horizontal.png';
 
 const Footer: React.FC = () => {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   const scrollToTop = () => {
@@ -21,27 +23,27 @@ const Footer: React.FC = () => {
   };
 
   const quickLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'Team', href: '#team' },
-    { name: 'Clients', href: '#clients' },
-    { name: 'Contact', href: '#contact' }
+    { name: t('header.home'), href: '#home' },
+    { name: t('header.services'), href: '#services' },
+    { name: t('header.team'), href: '#team' },
+    { name: t('header.clients'), href: '#clients' },
+    { name: t('header.contact'), href: '#contact' }
   ];
 
   const services = [
-    'Custom Software Development',
-    'Web Applications',
-    'Mobile Applications',
-    'AI Solutions',
-    'Automation Systems',
-    'CRM Systems'
+    t('services.data.1.title'),
+    t('services.data.2.title'),
+    t('services.data.3.title'),
+    t('services.data.4.title'),
+    t('services.data.5.title'),
+    t('services.data.6.title')
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Instagram, href: '#', label: 'Instagram' }
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/paul-realpe-631b17a6', label: 'LinkedIn' },
+    { icon: Github, href: 'https://github.com/paulmrg-461', label: 'GitHub' },
+    { icon: Twitter, href: 'https://x.com/devpaul_co', label: 'Twitter' },
+    { icon: Instagram, href: 'https://www.instagram.com/devpaul_co', label: 'Instagram' }
   ];
 
   return (
@@ -52,15 +54,14 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
-                <Code className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-2xl font-bold">Modware</span>
+              <img 
+                src={logoHorizontal} 
+                alt="Modware" 
+                className="h-8 md:h-10 w-auto transition-opacity duration-300"
+              />
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Transforming businesses through innovative software solutions. 
-              We build custom applications, automate processes, and implement 
-              cutting-edge AI technologies.
+              {t('footer.description')}
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-300">
@@ -83,7 +84,7 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-6">{t('footer.quickLinks')}</h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -100,7 +101,7 @@ const Footer: React.FC = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Our Services</h3>
+            <h3 className="text-lg font-semibold mb-6">{t('footer.services')}</h3>
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service}>
@@ -114,7 +115,7 @@ const Footer: React.FC = () => {
 
           {/* Contact & Social */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Get in Touch</h3>
+            <h3 className="text-lg font-semibold mb-6">{t('footer.getInTouch')}</h3>
             <div className="space-y-4 mb-6">
               <div className="flex items-center space-x-3 text-gray-300">
                 <Mail className="w-5 h-5 text-primary-400" />
@@ -138,7 +139,7 @@ const Footer: React.FC = () => {
             
             {/* Social Links */}
             <div>
-              <h4 className="text-sm font-medium mb-3 text-gray-400">Follow Us</h4>
+              <h4 className="text-sm font-medium mb-3 text-gray-400">{t('footer.followUs')}</h4>
               <div className="flex space-x-3">
                 {socialLinks.map((social) => {
                   const Icon = social.icon;
@@ -147,6 +148,7 @@ const Footer: React.FC = () => {
                       key={social.label}
                       href={social.href}
                       aria-label={social.label}
+                      target="_blank"
                       className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors group"
                     >
                       <Icon className="w-5 h-5 text-gray-400 group-hover:text-white" />
