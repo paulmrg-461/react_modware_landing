@@ -130,7 +130,7 @@ const Contact: React.FC = () => {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">{t('contact.info.email')}</h4>
                   <a 
-                    href="mailto:info@modware.lat" 
+                    href="mailto:co.devpaul@gmail.com" 
                     className="text-primary-600 hover:text-primary-700 transition-colors"
                   >
                     info@modware.lat
@@ -155,7 +155,7 @@ const Contact: React.FC = () => {
               <h4 className="font-semibold text-gray-900 mb-4">{t('contact.quickContact.title')}</h4>
               <div className="space-y-3">
                 <a 
-                  href="mailto:info@modware.lat"
+                  href="mailto:co.devpaul@gmail.com"
                   className="flex items-center space-x-3 text-gray-700 hover:text-primary-600 transition-colors"
                 >
                   <Mail className="w-5 h-5" />
@@ -168,10 +168,15 @@ const Contact: React.FC = () => {
                   <Phone className="w-5 h-5" />
                   <span>{t('contact.quickContact.call')}</span>
                 </a>
-                <button className="flex items-center space-x-3 text-gray-700 hover:text-primary-600 transition-colors">
+                <a 
+                  href="https://wa.me/573043162313?text=Hola%20Modware%20Lat!%20"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-3 text-gray-700 hover:text-primary-600 transition-colors"
+                >
                   <MessageCircle className="w-5 h-5" />
                   <span>{t('contact.quickContact.chat')}</span>
-                </button>
+                </a>
               </div>
             </div>
           </div>

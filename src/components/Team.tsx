@@ -51,7 +51,14 @@ const Team: React.FC = () => {
 
               {/* Member Info */}
               <h3 className="text-xl font-bold text-gray-900 mb-2">
-                {member.name}
+                <a 
+                  href={`https://wa.me/${member.phone.replace(/[^0-9]/g, '')}?text=Hola%20${encodeURIComponent(member.name)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary-600 transition-colors cursor-pointer"
+                >
+                  {member.name}
+                </a>
               </h3>
               <p className="text-primary-600 font-medium mb-4 capitalize">
                 {member.profession}
