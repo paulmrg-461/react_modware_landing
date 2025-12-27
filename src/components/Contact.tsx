@@ -162,14 +162,14 @@ const Contact: React.FC = () => {
                   <span>{t('contact.quickContact.email')}</span>
                 </a>
                 <a 
-                  href="tel:+573043162313"
+                  href="tel:+573174105333"
                   className="flex items-center space-x-3 text-gray-700 hover:text-primary-600 transition-colors"
                 >
                   <Phone className="w-5 h-5" />
                   <span>{t('contact.quickContact.call')}</span>
                 </a>
                 <a 
-                  href="https://wa.me/573043162313?text=Hola%20Modware%20Lat!%20"
+                  href="https://wa.me/573174105333?text=Hola%20Modware%20Lat!%20"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-3 text-gray-700 hover:text-primary-600 transition-colors"

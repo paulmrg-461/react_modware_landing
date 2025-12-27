@@ -40,10 +40,14 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/paul-realpe-631b17a6', label: 'LinkedIn' },
-    { icon: Github, href: 'https://github.com/paulmrg-461', label: 'GitHub' },
-    { icon: Twitter, href: 'https://x.com/devpaul_co', label: 'Twitter' },
-    { icon: Instagram, href: 'https://www.instagram.com/devpaul_co', label: 'Instagram' }
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/', label: 'LinkedIn' },
+    { icon: Github, href: 'https://github.com/', label: 'GitHub' },
+    { icon: Twitter, href: 'https://x.com/', label: 'Twitter' },
+    { icon: Instagram, href: 'https://www.instagram.com/', label: 'Instagram' }
+    // { icon: Linkedin, href: 'https://www.linkedin.com/in/paul-realpe-631b17a6', label: 'LinkedIn' },
+    // { icon: Github, href: 'https://github.com/paulmrg-461', label: 'GitHub' },
+    // { icon: Twitter, href: 'https://x.com/devpaul_co', label: 'Twitter' },
+    // { icon: Instagram, href: 'https://www.instagram.com/devpaul_co', label: 'Instagram' }
   ];
 
   return (
@@ -129,10 +133,10 @@ const Footer: React.FC = () => {
               <div className="flex items-center space-x-3 text-gray-300">
                 <Phone className="w-5 h-5 text-primary-400" />
                 <a 
-                  href="tel:+573043162313"
+                  href="tel:+573174105333"
                   className="hover:text-primary-400 transition-colors"
                 >
-                  +57 304 316 2313
+                  +57 317 410 5333
                 </a>
               </div>
             </div>
@@ -172,7 +176,7 @@ const Footer: React.FC = () => {
               <div className="flex items-center space-x-1">
                 <span>Made with</span>
                 <Heart className="w-4 h-4 text-red-500" />
-                <a href="https://devpaul.pro" target="_blank" rel="noopener noreferrer" className="hover:text-primary-400 transition-colors">by DevPaul</a> 
+                <a href="https://modware.lat" target="_blank" rel="noopener noreferrer" className="hover:text-primary-400 transition-colors">by Modware</a> 
               </div>
             </div>
             

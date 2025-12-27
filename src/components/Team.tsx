@@ -1,6 +1,6 @@
 import React from 'react';
-import { Mail, Phone, Linkedin, Github, Globe } from 'lucide-react';
-import { collaborators } from '../data';
+// import { Mail, Phone, Linkedin, Github, Globe } from 'lucide-react';
+// import { collaborators } from '../data';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Team: React.FC = () => {
@@ -19,13 +19,12 @@ const Team: React.FC = () => {
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
           {collaborators.map((member) => (
             <div 
               key={member.id}
               className="bg-gray-50 rounded-2xl p-6 text-center card-hover group"
             >
-              {/* Profile Image */}
               <div className="relative mb-6">
                 <div className="w-32 h-32 mx-auto rounded-full overflow-hidden bg-gray-200 ring-4 ring-white shadow-lg">
                   <img 
@@ -45,11 +44,9 @@ const Team: React.FC = () => {
                   </div>
                 </div>
                 
-                {/* Status Indicator */}
                 <div className="absolute bottom-2 right-2 w-4 h-4 bg-green-400 rounded-full border-2 border-white" />
               </div>
 
-              {/* Member Info */}
               <h3 className="text-xl font-bold text-gray-900 mb-2">
                 <a 
                   href={`https://wa.me/${member.phone.replace(/[^0-9]/g, '')}?text=Hola%20${encodeURIComponent(member.name)}`}
@@ -64,7 +61,6 @@ const Team: React.FC = () => {
                 {member.profession}
               </p>
 
-              {/* Contact Info */}
               <div className="space-y-2 mb-6">
                 <a 
                   href={`mailto:${member.email}`}
@@ -82,7 +78,6 @@ const Team: React.FC = () => {
                 </a>
               </div>
 
-              {/* Social Links */}
               <div className="flex justify-center space-x-3 opacity-0 group-hover:opacity-100 transition-opacity">
                 {member.github && (
                   <a 
@@ -117,7 +112,7 @@ const Team: React.FC = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Team Stats */}
         <div className="mt-16 gradient-bg rounded-2xl p-8 md:p-12 text-white relative overflow-hidden">
