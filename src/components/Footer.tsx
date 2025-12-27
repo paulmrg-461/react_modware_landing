@@ -120,7 +120,7 @@ const Footer: React.FC = () => {
               <div className="flex items-center space-x-3 text-gray-300">
                 <Mail className="w-5 h-5 text-primary-400" />
                 <a 
-                  href="mailto:info@modware.lat"
+                  href="mailto:co.devpaul@gmail.com"
                   className="hover:text-primary-400 transition-colors"
                 >
                   info@modware.lat
@@ -172,7 +172,7 @@ const Footer: React.FC = () => {
               <div className="flex items-center space-x-1">
                 <span>Made with</span>
                 <Heart className="w-4 h-4 text-red-500" />
-                <span>in Colombia</span>
+                <a href="https://devpaul.pro" target="_blank" rel="noopener noreferrer" className="hover:text-primary-400 transition-colors">by DevPaul</a> 
               </div>
             </div>
             

@@ -25,7 +25,7 @@ import jimmyImage from '../assets/images/team/jimmy.jpeg';
 import rafaelImage from '../assets/images/team/rafael.jpeg';
 import victorImage from '../assets/images/team/victor.jpg';
 import michaelImage from '../assets/images/team/michael.jpeg';
-import paulImage from '../assets/images/team/paul.jpg';
+import paulImage from '../assets/images/team/paul.jpeg';
 
 export const collaborators: Collaborator[] = [
   {
@@ -37,7 +37,7 @@ export const collaborators: Collaborator[] = [
     phone: '+573125035306',
     github: 'https://github.com/Jimmy287',
     linkedin: 'https://www.linkedin.com/in/jimmyrealpe',
-    portfolio: 'https://jimmyarg87.github.io/portfolio'
+    portfolio: 'https://jimmy-realpe.web.app'
   },
   {
     id: 2,
