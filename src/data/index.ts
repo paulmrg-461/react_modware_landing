@@ -56,7 +56,7 @@ export const collaborators: Collaborator[] = [
     imagePath: paulImage,
     email: 'co.devpaul@gmail.com',
     profession: 'Fullstack developer',
-    phone: '+573174105333',
+    phone: '+573107254077',
     github: 'https://github.com/paulmrg-461',
     linkedin: 'https://www.linkedin.com/in/paul-realpe-631b17a6',
     portfolio: 'https://devpaul.pro'
